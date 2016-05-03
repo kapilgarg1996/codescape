@@ -2,9 +2,9 @@
   "name": "codescape",
   "version": "1.0.0",
   "description": "A node tool to escape characters to html entities or uri entities and to convert tabs to spaces so that your code indentation and symbols does not change in blogs or websites.",
-  "main": "codescape.js",
+  "main": "./index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -13,8 +13,8 @@
   "keywords": [
     "code-format",
     "escape",
+	"hrml",
     "blogger-code",
-    "uriencode",
     "html-escape"
   ],
   "author": "kapil garg",
@@ -22,5 +22,14 @@
   "bugs": {
     "url": "https://github.com/kapilgarg1996/codescape/issues"
   },
-  "homepage": "https://github.com/kapilgarg1996/codescape#readme"
+  "homepage": "https://github.com/kapilgarg1996/codescape#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "detab": "^1.0.2",
+    "escape-html": "^1.0.3"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^2.4.5"
+  }
 }
