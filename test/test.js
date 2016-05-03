@@ -24,4 +24,13 @@ describe('codescape', function(){
 			expect(escapedString).to.be(resultString) ;
 		}) ;
 	});
+	describe('given file', function(){
+		it('should escape whole file if selector is not given', function(){
+			var filename = 'test/input.html' ;
+			var callback = function(result){
+				expect(result).to.be(false) ;
+			} ;
+			codescape({'filename': filename, 'callback':callback}) ;
+		});
+	});
 }) ;
